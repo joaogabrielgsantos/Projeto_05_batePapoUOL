@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif; 
+    background-color: #F3F3F3;
+    height: 100vh;
+}
+
+.header {
+    width: 375px;
+    height: 80px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px;
+    position: fixed;
+    top: 0;
+}
+.header > img {
+    width: 75px;
+    height: 53px;
+}
+.header > ion-icon {
+    width: 43px;
+    height: 31px;
+}
+.content {    
+    width: 375px;
+    padding: 106px 0 84px 0;
+}
+.content li {
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px 8px;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+.enter-leave {
+    background: #DCDCDC;
+}
+.message {
+    background: #FFFFFF;
+}
+.private-message {
+    background: #FFDEDE;
+}
+.content span{
+    color: #AAAAAA;
+    font-weight: 400;
+}
+strong {
+    font-weight: 700;
+}
+.content p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer {
+    width: 375px;
+    height: 80px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: 25px 0 25px 17px;
+}
+
+.footer > textarea {
+    height: 100%;
+    width: 82%;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.footer ion-icon {
+    position: absolute;
+    right: 22px;
+    width: 26px;
+    height: 26px;
+}
