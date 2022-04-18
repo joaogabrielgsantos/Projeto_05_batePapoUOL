@@ -42,9 +42,11 @@ function buscarMensagem() {
     promise.then(processarResposta);
     function processarResposta(response) {
         mensagens = response.data;
+        const lista = document.querySelector(".content")
+        lista.innerHTML = ''
+        console.log("tá acontecendo alguma coisa")
         for (let i = 0; i < mensagens.length; i++) {
             const element = mensagens[i];
-            const lista = document.querySelector(".content")
             if (element.type === "status") {
                 lista.innerHTML += `<li class="status">
                 <p><span>(${element.time})</span> <strong>${element.from}</strong> ${element.text}</p>
@@ -53,7 +55,7 @@ function buscarMensagem() {
                 lista.innerHTML += `<li class="message">
                 <p><span>(${element.time})</span> <strong>${element.from}</strong> para <strong>${element.to}</strong>: ${element.text}</p>
             </li>`
-            } if (element.type === "private_message") {
+            } if (element.type === "private_message" && (element.from === usuario[0].name || element.to === usuario[0].name)) {
                 lista.innerHTML += `<li class="private_message">
                 <p><span>(${element.time})</span> <strong>${element.from}</strong> reservadamente para <strong>${element.to}</strong>: ${element.text}</p>
             </li>`
@@ -61,17 +63,11 @@ function buscarMensagem() {
             const elementoQueQueroQueApareca = document.querySelector('li:last-child');
             elementoQueQueroQueApareca.scrollIntoView();
         }
-        setInterval(atualizarMensagens,3000) 
-        function atualizarMensagens (){
-            console.log ("tá chamando a funcao")
-            
-        }
 
-       
+
     }
 }
 
-buscarMensagem()
 
 function enviarMensagem() {
     let texto = document.querySelector("textarea").value
@@ -90,3 +86,4 @@ function enviarMensagem() {
 
 }
 
+setInterval(buscarMensagem, 3000)
