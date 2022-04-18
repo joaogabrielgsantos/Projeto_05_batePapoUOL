@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilos.css">
     <link rel="shortcut icon" href="/assets/logo-uol-icon-256.png">
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
@@ -17,13 +19,13 @@
     </div>
 
     <ul class="content">
-        <li class="enter-leave">
+        <li class="status">
             <p><span>(09:21:45)</span> <strong>João</strong> entra na sala...</p>
         </li>
         <li class="message">
             <p><span>(09:22:28)</span> <strong>João</strong> para <strong>Todos</strong>:  Bom dia</p>
         </li>
-        <li class="private-message">
+        <li class="private_message">
             <p><span>(09:22:48)</span> <strong>João</strong> reservadamente para <strong>Maria</strong>:  Oi gatinha quer tc?</p>
         </li>
         
@@ -31,12 +33,11 @@
 
     <div class="footer">
         <textarea style="resize: none" placeholder="Escreva aqui..."></textarea>
-        <ion-icon name="paper-plane-outline"></ion-icon>
+        <ion-icon class="botao-enviar" name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
     </div>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts.js"></script>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>

@@ -42,13 +42,13 @@ body {
     margin: 4px 0;
     border-radius: 2px;
 }
-.enter-leave {
+.status {
     background: #DCDCDC;
 }
 .message {
     background: #FFFFFF;
 }
-.private-message {
+.private_message {
     background: #FFDEDE;
 }
 .content span{
@@ -88,4 +88,5 @@ strong {
     right: 22px;
     width: 26px;
     height: 26px;
+    cursor: pointer;
 }
